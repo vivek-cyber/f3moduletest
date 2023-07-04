@@ -78,7 +78,7 @@ function gettimezone(timez,tzone,pcode)
 function postaldata(data)
 {
     postofficelist=data[0].PostOffice
-    message.innerText="Number of pincodes found "+postofficelist.length
+    message.innerText="Number of Postoffices found "+postofficelist.length
     console.log(postofficelist)
 
     displaylist(postofficelist)
