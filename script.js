@@ -14,7 +14,7 @@ var pincode=document.getElementById("pincode")
 var message=document.getElementById("message")
 var postlist=document.getElementById("postlist")
 var searchbox=document.getElementById("postsearch")
-
+var iph2=document.getElementById("ipadd")
 //async function to load ipaddress on screen 
 async function func1()
 {
@@ -41,6 +41,7 @@ function getipinfo(data)
     console.log(data)
     var IP=data.ip
     console.log(IP)
+   iph2.innerText+=IP
     var cordinates=data.loc.split(",")
     console.log(cordinates)
     lat.innerText=lat.innerText+" "+cordinates[0]
@@ -78,7 +79,7 @@ function gettimezone(timez,tzone,pcode)
 function postaldata(data)
 {
     postofficelist=data[0].PostOffice
-    message.innerText="Number of Postoffices found "+postofficelist.length
+    message.innerText="Number of PostOffices found "+postofficelist.length
     console.log(postofficelist)
 
     displaylist(postofficelist)
